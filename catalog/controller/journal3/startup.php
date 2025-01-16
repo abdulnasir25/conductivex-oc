@@ -163,13 +163,13 @@ class ControllerJournal3Startup extends Controller {
 		}
 
 		// Assets folder writable check
-		if (!is_writable(JOURNAL3_ASSETS_PATH)) {
-			$this->print_error(
-				'Not Writable',
-				JOURNAL3_ASSETS_PATH . ' is not writable!',
-				'Consult with your hosting provider for more information.'
-			);
-		}
+		// if (!is_writable(JOURNAL3_ASSETS_PATH)) {
+		// 	$this->print_error(
+		// 		'Not Writable',
+		// 		JOURNAL3_ASSETS_PATH . ' is not writable!',
+		// 		'Consult with your hosting provider for more information.'
+		// 	);
+		// }
 
 		// models
 		$this->load->model('journal3/module');
