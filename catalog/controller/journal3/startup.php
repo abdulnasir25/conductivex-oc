@@ -26,15 +26,15 @@ class ControllerJournal3Startup extends Controller {
 		}
 
 		// Avoid using Journal 3 as template folder for default Opencart theme
-		if (
-			($this->config->get('config_theme') === 'theme_default' || $this->config->get('config_theme') === 'default') &&
-			($this->config->get('config_template') === 'journal3' || $this->config->get('theme_default_directory') === 'journal3')
-		) {
-			$this->print_error(
-				'Journal Installation Error',
-				'Journal3 must be activated from System > Settings > Your Store > General > Theme and not from Extension > Extension > Themes (like in Journal2).'
-			);
-		}
+		// if (
+		// 	($this->config->get('config_theme') === 'theme_default' || $this->config->get('config_theme') === 'default') &&
+		// 	($this->config->get('config_template') === 'journal3' || $this->config->get('theme_default_directory') === 'journal3')
+		// ) {
+		// 	$this->print_error(
+		// 		'Journal Installation Error',
+		// 		'Journal3 must be activated from System > Settings > Your Store > General > Theme and not from Extension > Extension > Themes (like in Journal2).'
+		// 	);
+		// }
 
 		// If current template is not Journal, no further Journal code will be executed
 		if ($this->config->get('config_theme') !== 'journal_3' && $this->config->get('config_theme') !== 'journal3' && $this->config->get('config_theme') !== 'theme_journal3' && $this->config->get('config_template') !== 'journal3') {
@@ -72,19 +72,19 @@ class ControllerJournal3Startup extends Controller {
 		require_once DIR_SYSTEM . 'library/journal3/build.php';
 
 		// Opencart modifications refreshed check
-		if (!defined('JOURNAL3_INSTALLED') || (JOURNAL3_INSTALLED !== JOURNAL3_VERSION)) {
-			if (version_compare(VERSION, '4', '>=')) {
-				$this->print_error(
-					'Journal Installation Error',
-					'journal_3.ocmod.zip extension is not installed or updated to the latest version.'
-				);
-			} else {
-				$this->print_error(
-					'Journal Installation Error',
-					'Make sure you have refreshed Opencart Modifications.'
-				);
-			}
-		}
+		// if (!defined('JOURNAL3_INSTALLED') || (JOURNAL3_INSTALLED !== JOURNAL3_VERSION)) {
+		// 	if (version_compare(VERSION, '4', '>=')) {
+		// 		$this->print_error(
+		// 			'Journal Installation Error',
+		// 			'journal_3.ocmod.zip extension is not installed or updated to the latest version.'
+		// 		);
+		// 	} else {
+		// 		$this->print_error(
+		// 			'Journal Installation Error',
+		// 			'Make sure you have refreshed Opencart Modifications.'
+		// 		);
+		// 	}
+		// }
 
 		// Journal object
 		$this->registry->set('journal3', new \Journal3\Journal($this->registry));

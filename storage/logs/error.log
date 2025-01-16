@@ -1,0 +1,2 @@
+2025-01-16 13:50:20 - PHP Warning:  fopen(C:\xampp2\htdocs\conductivex-oc/storage/cache/cache.catalog.language.1737039020): Failed to open stream: No such file or directory in C:\xampp2\htdocs\conductivex-oc\system\library\cache\file.php on line 49
+2025-01-16 13:50:38 - PHP Warning:  fopen(C:\xampp2\htdocs\conductivex-oc/storage/cache/cache.store.1737039038): Failed to open stream: No such file or directory in C:\xampp2\htdocs\conductivex-oc\system\library\cache\file.php on line 49
