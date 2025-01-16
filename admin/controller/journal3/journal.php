@@ -16,23 +16,23 @@ class ControllerJournal3Journal extends Controller {
 
 	public function index() {
 		// Opencart modifications refreshed check
-		if (!defined('JOURNAL3_INSTALLED') || (JOURNAL3_INSTALLED !== JOURNAL3_VERSION)) {
-			$data['header'] = $this->load->controller('common/header');
-			$data['column_left'] = $this->load->controller('common/column_left');
-			$data['footer'] = $this->load->controller('common/footer');
+		// if (!defined('JOURNAL3_INSTALLED') || (JOURNAL3_INSTALLED !== JOURNAL3_VERSION)) {
+		// 	$data['header'] = $this->load->controller('common/header');
+		// 	$data['column_left'] = $this->load->controller('common/column_left');
+		// 	$data['footer'] = $this->load->controller('common/footer');
 
-			$data['error_title'] = 'Journal Installation Error';
+		// 	$data['error_title'] = 'Journal Installation Error';
 
-			if (version_compare(VERSION, '4', '>=')) {
-				$data['error_message'] = 'journal_3.ocmod.zip extension is not installed or updated to the latest version.';
-			} else {
-				$data['error_message'] = 'Make sure you have refreshed Opencart Modifications.';
-			}
+		// 	if (version_compare(VERSION, '4', '>=')) {
+		// 		$data['error_message'] = 'journal_3.ocmod.zip extension is not installed or updated to the latest version.';
+		// 	} else {
+		// 		$data['error_message'] = 'Make sure you have refreshed Opencart Modifications.';
+		// 	}
 
-			$this->response->setOutput($this->load->view('journal3/error', $data));
+		// 	$this->response->setOutput($this->load->view('journal3/error', $data));
 
-			return;
-		}
+		// 	return;
+		// }
 
 		if (!$this->model_journal3_journal->isInstalled()) {
 			$this->model_journal3_journal->install();
