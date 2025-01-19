@@ -8,11 +8,11 @@ define('HTTPS_SERVER', 'http://localhost/conductivex-oc/admin/');
 define('HTTPS_CATALOG', 'http://localhost/conductivex-oc/');
 
 // DIR
-define('DIR_APPLICATION', '/Applications/XAMPP/xamppfiles/htdocs/conductivex-oc/admin/');
-define('DIR_SYSTEM', '/Applications/XAMPP/xamppfiles/htdocs/conductivex-oc/system/');
-define('DIR_IMAGE', '/Applications/XAMPP/xamppfiles/htdocs/conductivex-oc/image/');
-define('DIR_STORAGE', '/Applications/XAMPP/xamppfiles/htdocs/conductivex-oc/storage/');
-define('DIR_CATALOG', '/Applications/XAMPP/xamppfiles/htdocs/conductivex-oc/catalog/');
+define('DIR_APPLICATION', 'C:/xampp2/htdocs/conductivex-oc/admin/');
+define('DIR_SYSTEM', 'C:/xampp2/htdocs/conductivex-oc/system/');
+define('DIR_IMAGE', 'C:/xampp2/htdocs/conductivex-oc/image/');
+define('DIR_STORAGE', 'C:/xampp2/htdocs/conductivex-oc/storage/');
+define('DIR_CATALOG', 'C:/xampp2/htdocs/conductivex-oc/catalog/');
 define('DIR_LANGUAGE', DIR_APPLICATION . 'language/');
 define('DIR_TEMPLATE', DIR_APPLICATION . 'view/template/');
 define('DIR_CONFIG', DIR_SYSTEM . 'config/');
